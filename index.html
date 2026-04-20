@@ -143,30 +143,46 @@ audio{
     margin-left: 20px;
 }
 /* ===== MEDIA QUERIES (AJUSTES ESPECÍFICOS PARA CELULAR) ===== */
-@media (max-width: 600px) {
-    .extra {
-        flex-direction: column;
-        align-items: center;
-    }
-    .extra img {
-        width: 80%;
-    }
-    .par {
-        font-size: 16px;
-        padding: 15px;
-    }
-    .con div:hover { flex: 1; } /* Desactiva expansión en móvil para evitar saltos */
+/* Evita que todo se desborde */
+* {
+    box-sizing: border-box;
 }
 
-/* Animaciones mantenidas */
-.slides{ display:flex; width:600%; animation: slide 18s infinite; }
-@keyframes slide{ 0%{margin-left:0;} 20%{margin-left:-100%;} 40%{margin-left:-200%;} 60%{margin-left:-300%;} 80%{margin-left:-400%;} 100%{margin-left:-500%;} }
-.zoom{ animation: zoom 3s infinite alternate; }
-@keyframes zoom{ from{transform:scale(1);} to{transform:scale(1.1);} }
-.float{ animation: float 3s infinite ease-in-out; }
-@keyframes float{ 0%, 100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+/* Contenedor principal adaptable */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
 
-/* ===== HAMBURGUESAS ===== */
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Diseño flexible */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Para celular */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
 
 .slider{
     width:500px;
