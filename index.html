@@ -12,9 +12,9 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#111;
     color:white;
     text-align:center;
+    background: url("imagenes/3c91385f30ffdc307f872d94a4a0dc10 (1).jpg") no-repeat center/cover;
 }
 
 ul {
@@ -48,10 +48,6 @@ ul {
                 0 0 20px rgba(71, 5, 80, 0.329),
                 0 0 40px rgba(255, 0, 221, 0.61);
     border-bottom: 2px solid white;
-}
-
-body{
-    background: url(imagenes/3c91385f30ffdc307f872d94a4a0dc10\ \(1\).jpg) no-repeat center/cover;
 }
 
 table{
@@ -108,7 +104,9 @@ table{
    margin: 0 auto;
    gap: 10px; 
 }
-
+.con{
+   height: 350px;
+}
 .con div{
    flex: 1;
    height: 100%;
@@ -142,47 +140,12 @@ audio{
     float: left;
     margin-left: 20px;
 }
+img{
+    max-width:100%;
+    height:auto;
+}
 /* ===== MEDIA QUERIES (AJUSTES ESPECÍFICOS PARA CELULAR) ===== */
-/* Evita que todo se desborde */
-* {
-    box-sizing: border-box;
-}
 
-/* Contenedor principal adaptable */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px;
-}
-
-/* Imágenes responsivas */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Diseño flexible */
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Para celular */
-@media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-}
 
 .slider{
     width:500px;
@@ -251,6 +214,35 @@ img {
 h1{
     margin-top:20px;
     color:#ffcc00;
+}
+@media (max-width:768px){
+
+    table, tr, td{
+        display:block;
+        width:100%;
+    }
+
+    .entorno{
+        flex-direction: column;
+    }
+
+    .con{
+        flex-direction: column;
+    }
+
+    .con div{
+        height:200px;
+    }
+
+    .extra{
+        flex-direction: column;
+        margin:20px;
+    }
+
+    .extra img{
+        width:100%;
+    }
+
 }
 
 </style>
